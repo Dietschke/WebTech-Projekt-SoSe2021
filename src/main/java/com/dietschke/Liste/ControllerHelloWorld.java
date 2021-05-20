@@ -9,12 +9,8 @@ public class ControllerHelloWorld {
 
     @RequestMapping("/")
         public String index(){
-        return "Hello World!";
-    }
-
-    @RequestMapping("/welcome")
-    public String welcome() {
         return "Willkommen auf WasBraucheIchDafuerNochmal?";
     }
+
 
 }

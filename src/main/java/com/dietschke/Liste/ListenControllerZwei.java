@@ -3,9 +3,10 @@ package com.dietschke.Liste;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Controller
@@ -13,6 +14,11 @@ public class ListenControllerZwei
 {
     @Autowired
     public ListeRepository listeRepository;
+
+    @Autowired
+    public ListeService listeService;
+
+
 
     @GetMapping("/listeerstellen")
     public String listeForm(Model model){
@@ -23,8 +29,11 @@ public class ListenControllerZwei
     @PostMapping("/listeerstellen")
     public String listeSubmit(@ModelAttribute Liste liste, Model model)
     {
-       listeRepository.save(liste);
         model.addAttribute("liste", liste);
+        listeRepository.save(liste);
         return "listeresult";
     }
+
+
+
 }

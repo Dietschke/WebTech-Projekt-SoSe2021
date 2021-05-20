@@ -9,7 +9,7 @@ import javax.persistence.Id;
     public class Liste {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         private String title;
         private String description;
@@ -17,7 +17,6 @@ import javax.persistence.Id;
         public Liste() {}
 
         public Liste(Long id, String title, String description) {
-            super();
             this.id = id;
             this.title = title;
             this.description = description;
