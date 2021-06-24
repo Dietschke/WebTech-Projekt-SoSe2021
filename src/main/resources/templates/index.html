@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<style>
+  #logo{
+    font-family: "Arial";
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 8px;
+  }
+  #logo-name{
+    font-family: "Courier New";
+    color: darkslategrey;
+    margin-top: 10px;
+  }
+  #navigation{
+    text-align: center;
+  }
+  #navigation a{
+    font-family: "Courier New";
+    color: darkslategrey;
+    padding: 4px;
+    font-size: large;
+  }
+  #navigation a:hover{
+    color: coral;
+    font-weight: bold;
+  }
+  #button{
+    font-family: "Courier New";
+    text-align: right ;
+  }
+
+  body{
+    background-image: url("https://html.sammy-codes.com/images/background.jpg");
+  }
+
+
+</style>
+<html xmlns:th="https://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>Alles Listen</title>
+  <link rel="shortcut icon" href="https://pics.freeicons.io/uploads/icons/png/15335374531580282645-512.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+<div id="top">
+  <div id="logo">WBIND
+    <img src="https://pics.freeicons.io/uploads/icons/png/15335374531580282645-512.png" alt="MenuIcon" height="24">
+  </div>
+  <div id="logo-name">WasBraucheIchNochmalDafuer</div>
+  <div id="button">
+    <a class="btn btn-outline-primary me-2" th:href="@{/logout}" th:classappend="${#request.requestURI == '/logout' ? 'active':''}">Logout</a>
+  </div>
+  <div id="navigation">
+    <h2 style="color: darkslategrey; font-family: 'Courier New'">Herzlich willkommen auf WasBraucheIchNochmalDafuer</h2>
+    <h3 style="color: darkslategrey; font-family: 'Courier New'">Bitte wähle eine Funktion aus:</h3>
+    <a href="http://localhost:8080/all"> Alle Listen</a>
+    <a href="http://localhost:8080/vue"> Liste erstellen</a>
+  </div>
+
+</body>
+</html>

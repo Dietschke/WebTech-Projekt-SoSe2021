@@ -7,18 +7,18 @@ app.component('dynamic-form', {
         <button type="button" @click="save()">Save</button>
     </div>
     <div>
-        <h2>Hier sind alle Listen:</h2>
+        <h2>Das sind deine Listen:</h2>
         <table>
             <thead>
-            <tr>
-                <th>Title</th>
-                <th>Description</th>
-            </tr>
+                <tr>
+                 <th>Title</th>
+                 <th>Description</th>
+                </tr>
             </thead>
             <tbody>
-            <tr v-if="items.length === 0">
+             <tr v-if="items.length === 0">
                 <td colspan="2">Keine Liste vorhanden</td>
-            </tr>
+             </tr>
             <tr v-for="liste in items">
                 <td>{{liste.title}}</td>
                 <td>{{liste.description}}</td>

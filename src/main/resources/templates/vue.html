@@ -1,7 +1,49 @@
 <!DOCTYPE HTML>
+
+<style>
+    #logo{
+        font-family: "Arial";
+        color: white;
+        display: inline-block;
+        font-weight: bold;
+        padding: 8px;
+        margin-top: 8px;
+    }
+    #logo-name{
+        font-family: "Courier New";
+        color: darkslategrey;
+        margin-top: 10px;
+    }
+    #dynamic-form{
+        font-family: "Courier New";
+        color: darkslategrey;
+        text-align: center;
+        table
+    }
+    #navigation a{
+        font-family: "Courier New";
+        color: darkslategrey;
+        padding: 4px;
+        font-size: small;
+    }
+    #navigation a:hover{
+        color: coral;
+        font-weight: bold;
+    }
+    #button{
+        font-family: "Courier New";
+        text-align: right ;
+    }
+    body{
+        background-image: url("https://html.sammy-codes.com/images/background.jpg");
+    }
+
+</style>
+
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Create Liste!</title>
+    <title>Liste erstellen</title>
+    <link rel="shortcut icon" href="https://pics.freeicons.io/uploads/icons/png/15335374531580282645-512.png">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://unpkg.com/vue@next" defer></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -9,9 +51,24 @@
     <script src="#" th:src="@{/js/dynamic-form.js}" defer></script>
 </head>
 <body>
-<h2>Create a Liste</h2>
+<div id="top">
+    <div id="logo">WBIND
+        <img src="https://pics.freeicons.io/uploads/icons/png/15335374531580282645-512.png" alt="MenuIcon" height="24"> </div>
+    <div id="logo-name">WasBraucheIchNochmalDafuer</div>
+    <div id="button">
+        <a class="btn btn-outline-primary me-2" th:href="@{/logout}" th:classappend="${#request.requestURI == '/logout' ? 'active':''}">Logout</a>
+    </div>
+    <div id="navigation">
+        <a href="http://localhost:8080/index"> Startseite</a>
+        <a href="http://localhost:8080/all"> Alle Listen</a>
+    </div>
+
+<h2 style="color: darkslategrey; font-family: 'Courier New'; text-align: center">Erstelle eine Liste</h2>
+<hr>
+
 <div id="dynamic-form">
     <dynamic-form></dynamic-form>
 </div>
+
 </body>
 </html>

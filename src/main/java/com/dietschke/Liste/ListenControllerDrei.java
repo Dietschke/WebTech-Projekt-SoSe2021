@@ -23,4 +23,14 @@ public class ListenControllerDrei {
         return "listentable";
 
     }
+
+    @RequestMapping("/index")
+    public String index(){
+        return "index";
+    }
+
+    @RequestMapping("/start")
+    public String start(){
+        return "start";
+    }
 }

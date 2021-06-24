@@ -38,7 +38,7 @@ public class ListenControllerZwei
     public String vue(@ModelAttribute Liste liste, Model model)
     {
         model.addAttribute("liste", liste);
-        listeRepository.save(liste);
+
         return "vue";
     }
 

@@ -13,26 +13,23 @@
         color: darkslategrey;
         margin-top: 10px;
     }
+    #navigation{
+        text-align: center;
+    }
     #navigation a{
         font-family: "Courier New";
         color: darkslategrey;
         padding: 4px;
-        font-size: small;
+        font-size: large;
     }
     #navigation a:hover{
         color: coral;
         font-weight: bold;
     }
-    #main{
-        font-family: "Courier New";
-        color: darkslategrey;
+    #top{
         text-align: center;
-;
     }
-    #button{
-        font-family: "Courier New";
-        text-align: right ;
-    }
+
     body{
         background-image: url("https://html.sammy-codes.com/images/background.jpg");
     }
@@ -51,35 +48,13 @@
     <div id="logo">WBIND
         <img src="https://pics.freeicons.io/uploads/icons/png/15335374531580282645-512.png" alt="MenuIcon" height="24">
     </div>
-    <div id="logo-name">WasBraucheIchNochmalDafuer</div>
-    <div id="button">
-        <a class="btn btn-outline-primary me-2" th:href="@{/logout}" th:classappend="${#request.requestURI == '/logout' ? 'active':''}">Logout</a>
+    <div id="logo-name">WasBraucheIchNochmalDafuer
     </div>
     <div id="navigation">
-        <a href="http://localhost:8080/index"> Startseite</a>
-        <a href="http://localhost:8080/vue"> Liste erstellen</a>
+        <h2 style="color: darkslategrey; font-family: 'Courier New'">Herzlich willkommen auf WasBraucheIchNochmalDafuer</h2>
+        <h3 style="color: darkslategrey; font-family: 'Courier New'">Bitte melde dich an:</h3>
+        <a href="http://localhost:8080/index"> Login</a>
     </div>
-    <div id="main">
-    <h2>Das sind deine Einkaufsliste:</h2>
-        <hr>
-    <table class="table" align="center">
-        <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-        </tr>
-        </thead>
-
-    <thread>
-        <tbody>
-        <tr th:each="Liste: ${test}">
-        <td th:text="${Liste.id}">
-        <td th:text="${Liste.title}">
-        <td th:text="${Liste.description}">
-
-    <tr>
-    <tbody>
 </div>
 </body>
 </html>
