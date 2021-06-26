@@ -18,7 +18,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(
                         HttpMethod.GET,
-                        Endpoints.Site.START
+                        Endpoints.Site.START,
+                        Endpoints.Site.INDEX,
+                        Endpoints.Site.VUE,
+                        Endpoints.Site.ALL
                 ).permitAll()
                 .antMatchers(
                         "/css/**",
