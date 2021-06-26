@@ -29,7 +29,7 @@ public class ListenControllerDrei {
         return "index";
     }
 
-    @RequestMapping("/start")
+    @RequestMapping("/")
     public String start(){
         return "start";
     }

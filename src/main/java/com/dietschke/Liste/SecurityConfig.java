@@ -28,7 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
 
                 .and()
-                .logout().logoutSuccessUrl("/start")
+                .logout().logoutSuccessUrl("/")
                 .and()
                 .oauth2Client()
                 .and()
