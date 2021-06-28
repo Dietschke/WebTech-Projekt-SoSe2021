@@ -1,11 +1,13 @@
-package com.dietschke.Liste;
+package com.dietschke.Liste.Controller;
 
+import com.dietschke.Liste.ListenClasses.Liste;
+import com.dietschke.Liste.Repository.ListeRepository;
+import com.dietschke.Liste.ListenClasses.ListeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-
 
 @Controller
 public class ListenControllerDrei {
@@ -21,7 +23,6 @@ public class ListenControllerDrei {
         List<Liste> meineListen = listeService.getAllListe();
         model.addAttribute("test", meineListen);
         return "listentable";
-
     }
 
     @RequestMapping("/index")

@@ -1,10 +1,10 @@
-package com.dietschke.Liste;
+package com.dietschke.Liste.Controller;
 
-
+import com.dietschke.Liste.ListenClasses.Liste;
+import com.dietschke.Liste.Repository.ListeRepository;
+import com.dietschke.Liste.ListenClasses.ListeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -25,9 +25,7 @@ public class ListenController {
     public Liste liste(@RequestParam(value = "title", defaultValue = "kein Gericht :(") String title,
                        @RequestParam(value = "description",defaultValue = "keine Description :(") String description) {
         return new Liste(counter.incrementAndGet(), String.format(template,title), String.format(template, description));
-
     }
-
 
     @GetMapping("/alleListen")
     public List<Liste> alleListen(){
@@ -44,7 +42,4 @@ public class ListenController {
     public List<Liste> getListen(){
         return listeService.getAllListe();
     }
-
-
-
 }

@@ -20,10 +20,14 @@ dependencies {
 	implementation 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	runtimeOnly 'org.postgresql:postgresql'
+
+
+//Diese Dependencies habe ich im Zusammenhang mit der Okta-Integration erstellt.
+//Ich musste sie leider auskommentieren, da sie die Funktion der App beeinträchtigt hat.
+//Okta hat zwar funktioniert, jedoch konnte ich keine Daten in der Datenbank abspeichern.
 //	implementation 'com.okta.spring:okta-spring-boot-starter:2.0.1'
 //	implementation 'org.springframework.boot:spring-boot-starter-security'
 //	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
-
 }
 
 test {

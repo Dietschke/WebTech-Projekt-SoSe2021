@@ -2,6 +2,10 @@
 //
 //import org.springframework.context.annotation.Configuration;
 //import org.springframework.http.HttpMethod;
+//Diese Klasse habe ich im Zusammenhang mit der Okta-Integration erstellt.
+//Ich musste sie leider auskommentieren, da sie die Funktion der App beeinträchtigt hat.
+//Okta hat zwar funktioniert, jedoch konnte ich keine Daten in der Datenbank abspeichern.
+
 //import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 //import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 //import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;

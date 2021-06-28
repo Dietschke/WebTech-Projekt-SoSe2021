@@ -1,13 +1,12 @@
-package com.dietschke.Liste;
+package com.dietschke.Liste.Controller;
 
+import com.dietschke.Liste.ListenClasses.Liste;
+import com.dietschke.Liste.Repository.ListeRepository;
+import com.dietschke.Liste.ListenClasses.ListeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 @Controller
 public class ListenControllerZwei
@@ -17,8 +16,6 @@ public class ListenControllerZwei
 
     @Autowired
     public ListeService listeService;
-
-
 
     @GetMapping("/listeerstellen")
     public String listeForm(Model model){
@@ -41,7 +38,4 @@ public class ListenControllerZwei
 
         return "vue";
     }
-
-
-
 }
